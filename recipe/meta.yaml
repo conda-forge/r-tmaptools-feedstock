@@ -1,4 +1,4 @@
-{% set version = "3.0" %}
+{% set version = '3.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,7 +13,7 @@ source:
   sha256: 1195bb72e75213b8048b10360fa3bc3bb8521efe2a15d17116a39623d2ce6634
 
 build:
-  merge_build_host: true  # [win]
+  merge_build_host: True  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -33,10 +33,8 @@ requirements:
     - r-lwgeom >=0.1_4
     - r-magrittr
     - r-raster >=2.7_15
-    - r-rgdal
-    - r-rgeos
-    - r-sf >=0.7_1
-    - r-sp
+    - r-sf >=0.9
+    - r-stars >=0.4_0
     - r-units >=0.6_1
     - r-viridislite
   run:
@@ -49,10 +47,8 @@ requirements:
     - r-lwgeom >=0.1_4
     - r-magrittr
     - r-raster >=2.7_15
-    - r-rgdal
-    - r-rgeos
-    - r-sf >=0.7_1
-    - r-sp
+    - r-sf >=0.9
+    - r-stars >=0.4_0
     - r-units >=0.6_1
     - r-viridislite
 
@@ -64,10 +60,12 @@ test:
 about:
   home: https://github.com/mtennekes/tmaptools
   license: GPL-3
-  summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap',
-    the package for visualizing thematic maps.
+  summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow
+    to create thematic maps. This package also facilitates 'tmap', the package for visualizing
+    thematic maps.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
   doc_url: https://cran.r-project.org/web/packages/tmaptools/tmaptools.pdf
   dev_url: https://github.com/mtennekes/tmaptools
 
@@ -77,3 +75,26 @@ extra:
     - agcopenhaver
     - oblute
     - tata17
+
+# Package: tmaptools
+# Type: Package
+# Title: Thematic Map Tools
+# Version: 3.0
+# Authors@R: person("Martijn", "Tennekes", email = "mtennekes@gmail.com", role = c("aut", "cre"))
+# Description: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap', the package for visualizing thematic maps.
+# License: GPL-3
+# Encoding: UTF-8
+# LazyData: true
+# Date: 2020-03-30
+# Depends: R (>= 3.0), methods
+# Imports: sf (>= 0.9), lwgeom (>= 0.1-4), stars (>= 0.4-0), units (>= 0.6-1), grid, raster (>= 2.7-15), classInt, KernSmooth, magrittr, RColorBrewer, viridisLite, stats, dichromat, XML
+# Suggests: tmap (>= 2.2), rmapshaper, osmdata, OpenStreetMap, png, shiny, shinyjs
+# URL: https://github.com/mtennekes/tmaptools
+# BugReports: https://github.com/mtennekes/tmaptools/issues
+# RoxygenNote: 7.1.0
+# NeedsCompilation: no
+# Packaged: 2020-03-30 14:17:44 UTC; mtes
+# Author: Martijn Tennekes [aut, cre]
+# Maintainer: Martijn Tennekes <mtennekes@gmail.com>
+# Repository: CRAN
+# Date/Publication: 2020-03-30 15:00:02 UTC
