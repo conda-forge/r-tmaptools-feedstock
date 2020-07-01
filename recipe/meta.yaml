@@ -1,4 +1,4 @@
-{% set version = '3.0' %} 
+{% set version = "3.1" %} 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmaptools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmaptools/tmaptools_{{ version }}.tar.gz
-  sha256: 1195bb72e75213b8048b10360fa3bc3bb8521efe2a15d17116a39623d2ce6634
+  sha256: 403aab1754adb6eb966027286e7e624e6aab689e0c44a2bea5f208cfe26bac43
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -60,12 +60,10 @@ test:
 about:
   home: https://github.com/mtennekes/tmaptools
   license: GPL-3
-  summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow
-    to create thematic maps. This package also facilitates 'tmap', the package for visualizing
-    thematic maps.
+  summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap', the package for visualizing thematic maps.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
   doc_url: https://cran.r-project.org/web/packages/tmaptools/tmaptools.pdf
   dev_url: https://github.com/mtennekes/tmaptools
 
