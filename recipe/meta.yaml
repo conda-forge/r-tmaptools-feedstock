@@ -24,31 +24,29 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
   host:
+  host:
     - r-base
-    - r-kernsmooth
     - r-rcolorbrewer
     - r-xml
     - r-classint
     - r-dichromat
     - r-lwgeom >=0.1_4
     - r-magrittr
-    - r-raster >=2.7_15
-    - r-sf >=0.9
-    - r-stars >=0.4_0
+    - r-sf >=0.9.2
+    - r-stars >=0.4_1
     - r-units >=0.6_1
     - r-viridislite
   run:
+  host:
     - r-base
-    - r-kernsmooth
     - r-rcolorbrewer
     - r-xml
     - r-classint
     - r-dichromat
     - r-lwgeom >=0.1_4
     - r-magrittr
-    - r-raster >=2.7_15
-    - r-sf >=0.9
-    - r-stars >=0.4_0
+    - r-sf >=0.9.2
+    - r-stars >=0.4_1
     - r-units >=0.6_1
     - r-viridislite
 
@@ -59,7 +57,7 @@ test:
 
 about:
   home: https://github.com/mtennekes/tmaptools
-  license: GPL-3
+  license: GPL-2.0-or-later
   summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap', the package for visualizing thematic maps.
   license_family: GPL3
   license_file:
