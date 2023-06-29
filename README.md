@@ -1,11 +1,11 @@
-About r-tmaptools
-=================
+About r-tmaptools-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tmaptools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mtennekes/tmaptools
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tmaptools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap', the package for visualizing thematic maps.
 
